@@ -2,8 +2,8 @@ from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    DATABASE_URL: str = "postgresql+asyncpg://hrcopilot:hrcopilot@localhost:5432/hrcopilot"
-    APP_NAME: str = "HR Copilot"
+    DATABASE_URL: str = "postgresql+asyncpg://documind:documind123@localhost:5432/documind"
+    APP_NAME: str = "DocuMind"
     DEBUG: bool = False
     OPENAI_API_KEY: str = ""
     EMBEDDING_MODEL: str = "text-embedding-3-small"
@@ -15,3 +15,4 @@ class Settings(BaseSettings):
 
 
 settings = Settings()
+
