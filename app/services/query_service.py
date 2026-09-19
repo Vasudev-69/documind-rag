@@ -13,7 +13,7 @@ from app.services.embedding_service import embed_texts, get_client
 from app.services.reranker_service import rerank
 from app.services.rrf import reciprocal_rank_fusion
 
-SYSTEM_PROMPT = """You are an HR assistant. Answer the user's question using only the context provided.
+SYSTEM_PROMPT = """You are an enterprise document assistant. Answer the user's question using only the context provided.
 If the answer is not in the context, say you don't have that information.
 Be concise and factual."""
 
@@ -115,3 +115,4 @@ async def run_query(
         answer=ans,
         sources=sources,
     )
+

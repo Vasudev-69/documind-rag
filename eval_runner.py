@@ -1,5 +1,5 @@
 """
-Eval runner for HR Copilot RAG pipeline.
+Eval runner for the DocuMind RAG pipeline.
 
 Usage:
     python eval_runner.py --tenant-id <uuid>
@@ -114,7 +114,7 @@ def print_report(results: list[EvalResult]) -> None:
     ]
 
     print("\n" + "=" * 70)
-    print("  HR COPILOT EVAL REPORT")
+    print("  DOCUMIND EVAL REPORT")
     print("=" * 70)
 
     print(f"\n{'SUMMARY':}")
@@ -314,3 +314,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

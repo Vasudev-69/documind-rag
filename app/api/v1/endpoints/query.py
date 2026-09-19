@@ -10,7 +10,7 @@ router = APIRouter(prefix="/query", tags=["query"])
 
 
 @router.post("/", response_model=QueryResponse)
-@observe(name="HR Copilot Query API")
+@observe(name="DocuMind Query API")
 async def query(request: QueryRequest, db: AsyncSession = Depends(get_db)):
     langfuse_context.update_current_trace(
         input={"question": request.question, "tenant_id": str(request.tenant_id)},
@@ -28,3 +28,4 @@ async def query(request: QueryRequest, db: AsyncSession = Depends(get_db)):
     langfuse_context.update_current_trace(output={"answer": result["answer"]})
 
     return QueryResponse(answer=result["answer"], sources=result["sources"])
+

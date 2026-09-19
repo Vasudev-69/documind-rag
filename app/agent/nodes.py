@@ -63,7 +63,7 @@ async def retrieve(state: AgentState, config: RunnableConfig) -> dict:
     }
 
 
-_CLASSIFY_PROMPT = """You are a retrieval quality classifier for an HR assistant.
+_CLASSIFY_PROMPT = """You are a retrieval quality classifier for an enterprise document assistant.
 
 Given a question and retrieved document chunks, decide whether the chunks are relevant
 enough to answer the question, or whether this should be escalated (chunks are completely off-topic).
@@ -135,7 +135,7 @@ async def classify(state: AgentState, config: RunnableConfig) -> dict:
     }
 
 
-_ANSWER_PROMPT = """You are an HR assistant. Answer the user's question using only the context provided.
+_ANSWER_PROMPT = """You are an enterprise document assistant. Answer the user's question using only the context provided.
 If the answer is not in the context, say you don't have that information.
 Be concise and factual."""
 
@@ -220,3 +220,4 @@ async def escalate(state: AgentState, config: RunnableConfig) -> dict:
         "answer": ans,
         "sources": [],
     }
+
